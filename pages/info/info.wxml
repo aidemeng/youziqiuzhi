@@ -1,0 +1,86 @@
+<!-- 完善信息页 -->
+<view class="container">
+  <view class="userform">
+    <form catchsubmit="formSubmit">
+      <!-- 基本信息 -->
+      <view class="baseinfo">
+        <view class="form-item">
+          <text class="tit">姓名</text>
+          <input name="name" value="{{userInfo.name}}" placeholder="请输入姓名" placeholder-class="placeholder"/>
+        </view>
+        <view class="form-item">
+          <text class="tit">性别</text>
+          <radio-group name="gender">
+            <label class="gender">
+              <radio value="1" checked="true"/>男
+              <radio value="2" checked="{{userInfo.gender==='2'}}"/>女
+            </label>
+          </radio-group>
+        </view>
+        <view class="form-item">
+          <text class="tit">年龄</text>
+          <input type="number" value="{{userInfo.age}}" name="age" placeholder="请输入年龄" placeholder-class="placeholder"/>
+        </view>
+        <view class="form-item">
+          <text class="tit">联系方式</text>
+          <input name="phone" value="{{userInfo.phone}}" placeholder="请输入手机号码" placeholder-class="placeholder"/>
+        </view>
+        <view class="form-item">
+          <text class="tit">身份</text>
+          <radio-group name="type" bindchange="handleTypeChange">
+            <label class="type">
+              <radio value="1" checked="true"/>在校生  
+              <radio value="2" checked="{{userInfo.type==='2'}}"/>毕业生
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+      <!-- 在校生信息 -->
+      <view hidden="{{userInfo.type==='2'}}" class="student">
+        <view class="form-item">
+          <text class="tit">专业</text>
+          <input name="major" value="{{userInfo.type==='2'? '':userInfo.major}}" placeholder="请输入专业" placeholder-class="placeholder"/>
+        </view>
+        <view class="form-item">
+          <text class="tit">毕业时间</text>
+          <picker name="date" mode="date" value="{{userInfo.date}}" fields="month" start="2010-01" end="2030-01" bindchange="bindDateChange">
+            <input type="text" value="{{userInfo.date}}" placeholder="请选择毕业时间" disabled placeholder-class="placeholder"/>
+          </picker>
+        </view>
+        <view class="form-item">
+          <text class="tit">期望职位</text>
+          <input name="spost" value="{{userInfo.type==='2'? '':userInfo.spost}}" placeholder="请输入职位" placeholder-class="placeholder"/>
+        </view>
+      </view>
+
+      <!-- 毕业生信息 -->
+      <view hidden="{{!userInfo.type || userInfo.type==='1'}}" class="graduate">
+        <view class="form-item">
+          <text class="tit">所在城市</text>
+          <picker name="city" mode="region" value="{{userInfo.city}}" bindchange="bindCityChange">
+            <input type="text" value='{{userInfo.city}}' placeholder="请选择所在城市" disabled placeholder-class="placeholder"/>
+          </picker>
+        </view>
+        <view class="form-item">
+          <text class="tit">入职公司</text>
+          <input name="company" value="{{userInfo.type==='1'? '':userInfo.company}}" placeholder="请输入公司" placeholder-class="placeholder"/>
+        </view>
+        <view class="form-item">
+          <text class="tit">工作职务</text>
+          <input name="gpost" value="{{userInfo.type==='1'? '':userInfo.gpost}}" placeholder="请输入职位" placeholder-class="placeholder"/>
+        </view>
+      </view>
+
+      <!-- 简介 -->
+      <view class="brief">
+        <text class="tit">简介</text>
+        <textarea name="brief" cols="10" rows="10" placeholder="一句话介绍自己~" placeholder-class="placeholder"></textarea>
+      </view>
+
+      <view class="btn-area">
+        <button style="width: 100%; margin: 20rpx 0" type="primary" formType="submit">Finish</button>
+      </view>
+    </form>
+  </view>
+</view>

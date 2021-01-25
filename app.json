@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/personal/personal",
+    "pages/index/index",
+    "pages/message/message",
+    "pages/info/info"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#087383",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "static/images/tabs/home.png",
+      "selectedIconPath": "static/images/tabs/home-fill.png"
+    },
+    {
+      "pagePath": "pages/message/message",
+      "text": "消息",
+      "iconPath": "static/images/tabs/message.png",
+      "selectedIconPath": "static/images/tabs/message-fill.png"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "text": "我的",
+      "iconPath": "static/images/tabs/user.png",
+      "selectedIconPath": "static/images/tabs/user-fill.png"
+    }]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#087383",
+    "navigationBarTitleText": "柚子求职",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

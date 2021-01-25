@@ -1,0 +1,133 @@
+/* pages/index/personal/personal.wxss */
+.personalContainer {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+}
+.user-section {
+  height: 240rpx;
+  padding: 100rpx 40rpx 0;
+}
+.userinfo-box {
+  position: relative;
+}
+.userinfo-box button:first-child {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: #f6f6f6;
+  font: 36rpx normal;
+}
+.userinfo-box .userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin-right: 30rpx;
+  border: 5rpx solid #fff;
+  border-radius: 50%;
+}
+.userinfo-box .userinfo {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.userinfo .userinfo-nickname {
+  font-size: 36rpx;
+}
+.userinfo .icon-man {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: #00CCFF;
+}
+.userinfo .icon-woman {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: #FF99CC;
+}
+.userinfo .vip-info {
+  max-width: 150rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  padding: 6rpx 10rpx;
+  background: #087383;
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 30rpx;
+}
+.userinfo .info-perfection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  color: #777;
+  font-size: 24rpx;
+}
+
+/* 个人导航 */
+.navContainer {
+  margin-top: -60rpx;
+  padding: 30rpx;
+  position:relative;
+}
+.navContainer .user-nav {
+  display: flex;
+  padding: 10rpx 0 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+}
+.user-nav .nav-item {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-nav .nav-item .iconfont {
+  font-size: 60rpx;
+  color: #087383;
+  line-height: 80rpx;
+}
+
+.user-nav .nav-item text:last-child {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 个人列表 */
+.personalContent {
+  background: #fff;
+  margin-top: 30rpx;
+  padding: 10rpx 30rpx;
+  border-radius: 15rpx;
+}
+.cardList .card-item {
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  color: #333;
+  position: relative;
+}
+.card-item .iconfont {
+  font-size: 40rpx;
+}
+.card-item .title {
+  margin-left: 20rpx;
+}
+.card-item .more {
+  position: absolute;
+  right: 0;
+  color: #aaa;
+  font-size: 32rpx;
+}
+.logout #btn {
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 22rpx 0;
+  background: #BAD3D0;
+  color: #333;
+  font: 28rpx normal;
+}

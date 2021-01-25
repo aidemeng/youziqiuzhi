@@ -1,0 +1,78 @@
+<!--pages/index/personal/personal.wxml-->
+<view class="personalContainer">
+  <!-- 用户信息区域 -->
+  <view class="user-section">
+    <view class="userinfo-box">
+      <button wx:if="{{!userInfo.avatarUrl}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <image class="userinfo-avatar" src="/static/images/personal/missing-face.png"></image>
+        <text>立即登录</text> 
+      </button> 
+      <view wx:else>
+        <view class="userinfo">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <view>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            <text class="iconfont {{userInfo.gender==='1' ? 'icon-man' : 'icon-woman'}}"></text>
+            <view class="vip-info" catchtap="handleInfo">柚币：0</view>
+          </view>
+          <view class="info-perfection" catchtap="handleInfo">
+            <text class="title">完善信息</text>
+            <text class="iconfont icon-you"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 个人中心 -->
+  <view class="navContainer">
+    <!-- 个人中心导航 -->
+    <view class="user-nav">
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
+        <text class="iconfont icon-fabu"></text>
+        <text>我的发布</text>
+      </view>
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
+        <text class="iconfont icon-pinglun"></text>
+        <text>我的评论</text>
+      </view>
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
+        <text class="iconfont icon-shoucang"></text>
+        <text>收藏和赞</text>
+      </view>
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
+        <text class="iconfont icon-geren"></text>
+        <text>个人主页</text>
+      </view>
+    </view>
+
+    <!-- 个人中心列表 -->
+    <view class="personalContent">
+      <view class="cardList">
+        <view class="card-item">
+          <text class="iconfont icon-zhaopinq"></text>
+          <text class="title">我要招聘</text>
+          <text class="more iconfont icon-you"></text>
+        </view>
+        <view class="card-item">
+          <text class="iconfont icon-xiugai"></text>
+          <text class="title">修改信息</text>
+          <text class="more iconfont icon-you"></text>
+        </view>
+        <view class="card-item">
+          <text class="iconfont icon-yijian"></text>
+          <text class="title">意见反馈</text>
+          <text class="more iconfont icon-you"></text>
+        </view>
+        <view class="card-item">
+          <text class="iconfont icon-guanyu"></text>
+          <text class="title">关于我们</text>
+          <text class="more iconfont icon-you"></text>
+        </view>
+      </view>
+    </view>
+    <view class="logout" wx:if="{{userInfo.avatarUrl}}">
+      <button id="btn" bindtap="handleLogout">退出登录</button>
+    </view>
+  </view>
+</view>
