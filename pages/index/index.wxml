@@ -1,3 +1,58 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
-<editor placeholder="哈哈"></editor>
+<view class="container">
+  <!-- 首页导航区域 -->
+  <view class="header">
+    <view class="nav">
+      <view class="nav-item">
+        <image src="/static/images/index/gonglue.png"></image>
+        <text>求职攻略</text>
+      </view>
+      <view class="nav-item">
+        <image src="/static/images/index/gongzuo.png"></image>
+        <text>实习内推</text>
+      </view>
+      <view class="nav-item">
+        <image src="/static/images/index/wenda.png"></image>
+        <text>热门问答</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 帖子部分 -->
+  <view class="content">
+    <view class="title">
+      <text>全部讨论</text>
+    </view>
+    <!-- 帖子列表区域 -->
+    <view class="post-item" wx:for="{{postList}}" wx:key="id">
+      <view class="info">
+        <image class="avatar" src="{{item.avatarImg}}"></image>
+        <view>
+          <text class="nickname">{{item.nickname}}</text>
+          <text class="time">{{item.time}}</text>
+        </view>
+      </view>
+      <view class="post-content">
+        <text class="word">{{item.content}}</text>
+        <view class="imgs">
+          <view class="img" wx:for="{{item.imgs}}" wx:key="*this" wx:for-item="imgUrl">
+            <image src="{{imgUrl}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class="function">
+        <view class="function-item">
+          <text class="iconfont icon-zan1"></text>
+          <text>{{item.like? item.like : '点赞'}}</text>
+        </view>
+        <view class="function-item">
+          <text class="iconfont icon-pinglun1"></text>
+          <text>{{item.comment? item.comment : '评论'}}</text>
+        </view>
+        <view class="function-item">
+          <text class="iconfont icon-shoucang2"></text>
+          <text>{{item.star? item.star : '收藏'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

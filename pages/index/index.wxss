@@ -1,1 +1,118 @@
 /* pages/index/index.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  background: #BAD3D0;
+}
+.header {
+  height: 200rpx;
+}
+.header .nav {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.nav .nav-item {
+  width: 160rpx;
+  height: 160rpx;
+  padding: 20rpx;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.nav .nav-item image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  padding: 20rpx 30rpx;
+  background: #ecf9ff;
+  border-radius: 40%;
+}
+.nav .nav-item text {
+  color: #253c66;
+  font-size: 26rpx;
+}
+/* 帖子内容区域 */
+.content {
+  margin-top: 30rpx;
+  padding: 5rpx 25rpx;
+  background: #BAD3D0;
+}
+.content .title {
+  text-align: center;
+  font: 36rpx bold;
+  color: #121f41;
+}
+/* 单独帖子样式 */
+.post-item {
+  background: #fff;
+  margin: 25rpx 0;
+  padding: 15rpx 25rpx 20rpx;
+  border-radius: 10rpx;
+}
+.post-item .info {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.post-item .info .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.post-item .info .nickname {
+  display: block;
+  margin-bottom: -10rpx;
+  font: 32rpx bold;
+  color: #1c1c1c;
+}
+.post-item .info .time {
+  font-size: 24rpx;
+  color: #929292;
+}
+.post-item .post-content {
+  padding: 10rpx 5rpx 0;
+  font-size: 34rpx;
+  color: #1c1c1c;
+} 
+.post-item .post-content .imgs {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.post-content .imgs .img {
+  width: 33.3%;
+  text-align: center;
+  margin-top: -2rpx;
+}
+.post-content .img image {
+  width: 27.5vw;
+  height: 27.5vw;
+  object-fit: cover;
+  border-radius: 4rpx;
+}
+.post-content .imgs img:first-child {
+  margin-right: 0;
+}
+.post-item .function {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+.post-item .function .function-item {
+  width: 30%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 28rpx;
+}
+.function .function-item .iconfont {
+  font-size: 40rpx;
+  margin: 1rpx 6rpx 0 0;
+}

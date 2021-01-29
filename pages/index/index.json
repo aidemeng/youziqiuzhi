@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#BAD3D0",
+  "navigationBarTitleText": "柚子求职社区",
+  "navigationBarTextStyle": "black"
 }
